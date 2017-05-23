@@ -1,0 +1,25 @@
+.special {
+  color: orange;
+}
+
+.test-component {
+  background: chocolate;
+  padding: 1em;
+  border-radius: 4px;
+  text-align: left;
+
+  span {
+    padding: 0;
+  }
+}
+
+.test-test {
+  font-family: 'Courier', sans-serif;
+  letter-spacing: 1px;
+  font-size: 10px;
+  color: #ccc;
+}
+
+button {
+  margin-right: 10px;
+}

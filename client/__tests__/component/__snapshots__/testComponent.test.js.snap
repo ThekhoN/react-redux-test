@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestComponent is a div element with class .test-component 1`] = `
+<div
+  className="test-component"
+>
+  <span
+    className="test-text"
+  >
+    This is a Connected Test Component
+  </span>
+  <h2>
+    test: 
+    <span
+      className="special"
+    >
+      true
+    </span>
+  </h2>
+  <br />
+  <h2>
+    0
+  </h2>
+  <button
+    onClick={[Function]}
+  >
+    -
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    +
+  </button>
+</div>
+`;
