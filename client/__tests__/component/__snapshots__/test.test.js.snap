@@ -6,7 +6,7 @@ exports[`Test component is a H2 element with class .test 1`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  Test Component Updated HMR with Jest
+  Hover-able Test Component
 </h2>
 `;
 
@@ -16,7 +16,7 @@ exports[`Test component is a H2 element with class .test 2`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  Test Component Updated HMR with Jest
+  Hover-able Test Component
 </h2>
 `;
 
@@ -26,6 +26,6 @@ exports[`Test component is a H2 element with class .test 3`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  Test Component Updated HMR with Jest
+  Hover-able Test Component
 </h2>
 `;

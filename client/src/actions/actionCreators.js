@@ -1,9 +1,18 @@
-import 'whatwg-fetch';
+import 'isomorphic-fetch';
+import {polyfill} from 'es6-promise';
+polyfill();
+const url = 'https://58b2874a78d2121200bfa8dd.mockapi.io/api/quotes';
 
 export const incrementCountActionCreator = payload => {
   return {
     type: 'INCREMENT_COUNT',
     payload
+  };
+};
+
+export const getQuotesSuccess = () => {
+  return {
+    type: 'GET_QUOTES_SUCCESS'
   };
 };
 
@@ -21,9 +30,9 @@ export const getQuotesActionCreator = payload => {
   };
 };
 
-export const getQuotesAsyncActionCreator = url => {
+export const getQuotesAsyncActionCreator = () => {
   return (dispatch) => {
-    fetch(url)
+    return fetch(url)
     .then(response => {
       if (!response.ok) {
         throw Error(response.statusText);
@@ -33,6 +42,7 @@ export const getQuotesAsyncActionCreator = url => {
     .then(response => response.json())
     .then(items => {
       dispatch(getQuotesActionCreator(items));
+      dispatch(getQuotesSuccess());
     })
     .catch(err => {
       console.log('fetch error: ', err);

@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getQuotesAsyncActionCreator} from '../../actions/actionCreators';
 
-const url = 'https://58b2874a78d2121200bfa8dd.mockapi.io/api/quotes';
-
 class QuoteComponent extends Component {
-  componentDidMount(){
-    this.props.handleGetQuotes(url);
+  componentDidMount () {
+    this.props.handleGetQuotes();
   }
   render () {
     const {quotes} = this.props;
@@ -30,10 +28,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    handleGetQuotes: (url) => {
-      dispatch(getQuotesAsyncActionCreator(url));
+    handleGetQuotes: () => {
+      dispatch(getQuotesAsyncActionCreator());
     }
-  }
-}
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuoteComponent);

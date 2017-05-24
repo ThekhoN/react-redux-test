@@ -20,8 +20,8 @@ test('Test component is a H2 element with class .test', () => {
 });
 
 describe('Test Component', () => {
-  it('Test Component renders h2 tah with text: Test Component Updated HMR with Jest', () => {
+  it('Test Component renders h2 tah with text: Hover-able Test Component', () => {
     const test = shallow(<Test />);
-    expect(test.find('h2').text()).toEqual('Test Component Updated HMR with Jest');
+    expect(test.find('h2').text()).toEqual('Hover-able Test Component');
   });
 });

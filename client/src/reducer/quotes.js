@@ -30,10 +30,14 @@ const defaultQuotes = [
     ]}
 ];
 
-const quotes = (state = {status: 'loaded', data: defaultQuotes}, action) => {
+const quotes = (state = {status: '', data: defaultQuotes}, action) => {
   switch (action.type) {
     case 'GET_QUOTES':
       return Object.assign({}, state, {data: action.payload});
+    case 'LOADING_QUOTES':
+      return {...state, status: 'loading'};
+    case 'LOADED_QUOTES':
+      return {...state, status: 'loaded'};
     default:
       return state;
   }

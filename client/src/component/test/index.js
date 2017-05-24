@@ -31,7 +31,7 @@ export default class Test extends Component {
         className={`test ${this.state.class}`}
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
-        >Test Component Updated HMR with Jest</h2>
+        >Hover-able Test Component</h2>
     );
   }
 }

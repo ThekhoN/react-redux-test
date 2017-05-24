@@ -17,5 +17,5 @@ describe('actions', () => {
       payload
     };
     expect(actionCreators.decrementCountActionCreator(payload)).toEqual(expectedAction);
-  })
+  });
 });
